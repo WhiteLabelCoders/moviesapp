@@ -1,3 +1,3 @@
 # Movies app
 
-[App link: ](wlc-movies.netlify.app)
+[App link: ](http://wlc-movies.netlify.app)
