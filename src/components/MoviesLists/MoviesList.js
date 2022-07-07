@@ -33,7 +33,7 @@ const MoviesGrid = styled.div`
     }
 
     @media (min-width: 992px) {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 `
 
@@ -57,7 +57,7 @@ function MoviesList() {
                         ))}
                     </MoviesGrid>
                 ) : (
-                    <NoMovies>No movies in your list! Add some!</NoMovies>
+                    <NoMovies>No movies! Add some!</NoMovies>
                 )}
             </Container>
         </StyledMoviesList>

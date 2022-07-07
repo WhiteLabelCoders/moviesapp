@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Button = styled.button`
     padding: 10px 15px;
+    min-width: 50px;
     background-color: var(--red);
     color: var(--white);
     border-radius: 5px;
@@ -9,7 +10,7 @@ const Button = styled.button`
     font-weight: 700;
     display: inline-block;
     border: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: opacity 0.3s ease;
     line-height: 1.1;
     cursor: pointer;
@@ -19,7 +20,7 @@ const Button = styled.button`
     }
 
     &:disabled {
-        opacity: 0.6;
+        background-color: #c4c4c4;
         pointer-events: none;
     }
 

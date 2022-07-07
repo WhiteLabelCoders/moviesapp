@@ -25,8 +25,16 @@ const StyledMoviesListTop = styled.header`
 
 const MoviesGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
+
+     @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 `
 function WatchedMovies() {
     const { watchedmovies } = useContext(GlobalContext);
@@ -48,7 +56,7 @@ function WatchedMovies() {
                         ))}
                     </MoviesGrid>
                 ) : (
-                    <NoMovies>No movies in your list! Add some!</NoMovies>
+                    <NoMovies>No movies! Add some!</NoMovies>
                 )}
             </Container>
         </StyledMoviesList>

@@ -3,7 +3,7 @@ export default (state, action) => {
         case "ADD_MOVIE_TO_WATCHLIST":
             return {
                 ...state,
-                mymymovieslist: [action.payload, ...state.mymovieslist],
+                mymovieslist: [action.payload, ...state.mymovieslist],
             };
         case "REMOVE_MOVIE_FROM_WATCHLIST":
             return {
@@ -31,7 +31,9 @@ export default (state, action) => {
         case "REMOVE_FROM_WATCHED":
             return {
                 ...state,
-                watchedmovies: state.watchedmovies.filter((movie) => movie.id !== action.payload),
+                watchedmovies: state.watchedmovies.filter(
+                    (movie) => movie.id !== action.payload
+                ),
             };
         default:
             return state;

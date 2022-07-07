@@ -7,6 +7,9 @@ import { Button } from '../Button/Button';
 const StyledMovie = styled.div`
     display: flex;
     margin-bottom: 1.5rem;
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    overflow: hidden;
 `
 
 const MovieImage = styled.div`
@@ -44,6 +47,10 @@ const MovieTitle = styled.h3`
     font-size: 1.25rem;
     color: var(--red);
     font-weight: 700;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
 `
 
 
@@ -52,6 +59,10 @@ const MovieDate = styled.h4`
     font-size: 1.25rem;
     font-weight: 300;
     color: var(--black);
+
+     @media screen and (max-width: 500px) {
+        font-size: 0.8rem;
+    }
 `
 
 
@@ -68,7 +79,9 @@ function ResultElement({ movie }) {
 
     const watchlistDisabled = storedMovie
         ? true
-        : false;
+        : storedMovieWatched
+            ? true
+            : false;
 
     const watchedDisabled = storedMovieWatched ? true : false;
 
@@ -88,9 +101,9 @@ function ResultElement({ movie }) {
             <MovieInfo>
                 <div className="header">
                     <MovieTitle>{movie.title}</MovieTitle>
-                    <h4 className="release-date">
+                    <MovieDate>
                         <Moment format="YYYY">{movie.release_date}</Moment>
-                    </h4>
+                    </MovieDate>
                 </div>
 
                 <MovieControls>
@@ -98,7 +111,7 @@ function ResultElement({ movie }) {
                         disabled={watchlistDisabled}
                         onClick={() => addMovieToWatchlist(movie)}
                     >
-                        Add to Watchlist
+                        Add to Movies List
                     </Button>
 
                     <Button

@@ -18,6 +18,10 @@ const AddContent = styled.div`
     padding: 5rem 0;
     max-width: 55rem;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+        padding: 3rem 0;
+    }
 `
 
 const InputWrap = styled.div`
