@@ -1,6 +1,6 @@
 # Movies app
 
-App helps to create 2 list of movies: Movies List and Watched Films.
+App helps to create 2 lists of movies: Movies List and Watched Films.
 Data from : [TMDB](https://www.themoviedb.org)
 
 ## Tools used in project
