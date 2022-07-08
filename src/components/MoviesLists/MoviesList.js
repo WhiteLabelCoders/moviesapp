@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Container } from "../Container/Container";
 import { GlobalContext } from "../../context/GlobalState";
 import MovieElement from '../MovieElement';
+import useDocumentTitle from '../../utils/useDocumentTitle';
 
 const StyledMoviesList = styled.section`
     padding-top: 4rem;
@@ -37,7 +38,10 @@ const MoviesGrid = styled.div`
     }
 `
 
-function MoviesList() {
+function MoviesList({ title }) {
+    {/* Set page title */ }
+    useDocumentTitle(title);
+    {/* Get current movies list from context */ }
     const { mymovieslist } = useContext(GlobalContext);
 
     return (

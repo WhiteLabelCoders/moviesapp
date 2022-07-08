@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from 'styled-components';
+import useDocumentTitle from "../../utils/useDocumentTitle";
 import { Container } from "../Container/Container";
 import ResultElement from "../ResultElement";
 
@@ -40,7 +41,8 @@ const InputWrap = styled.div`
     }
 `
 
-function Add() {
+function Add({ title }) {
+    useDocumentTitle(title)
     const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
 

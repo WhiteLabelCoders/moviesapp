@@ -8,15 +8,16 @@ import "./App.css";
 
 import { GlobalProvider } from "./context/GlobalState";
 
+
 function App() {
   return (
     <GlobalProvider>
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/" element={<MoviesList />} />
-          <Route path="/watchedmovies" element={<WatchedMovies />} />
-          <Route path="/add" element={<Add />} />
+          <Route exact path="/" element={<MoviesList title="Movies List" />} />
+          <Route path="/watchedmovies" element={<WatchedMovies title="Watched Movies" />} />
+          <Route path="/add" element={<Add title="Add Movie" />} />
         </Routes>
       </Router>
     </GlobalProvider>

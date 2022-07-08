@@ -16,12 +16,14 @@ const MovieImage = styled.div`
     img {
         width: 105px;
         height: 143px;
-        background-color: #dbdada;
         border-radius: 5px;
-        margin-right: 15px;
-        display: block;
-        color: transparent
     }
+`
+
+const PlaceHolder = styled.div`
+    width: 105px;
+    height: 143px;
+    background-color: #dbdada;
 `
 
 const MovieControls = styled.div`
@@ -74,9 +76,11 @@ function ResultElement({ movie }) {
         watchedmovies,
     } = useContext(GlobalContext);
 
+    {/* check type of film */ }
     let storedMovie = mymovieslist.find((o) => o.id === movie.id);
     let storedMovieWatched = watchedmovies.find((o) => o.id === movie.id);
 
+    {/* check with button sholud be blocked */ }
     const watchlistDisabled = storedMovie
         ? true
         : storedMovieWatched
@@ -94,7 +98,7 @@ function ResultElement({ movie }) {
                         alt={`${movie.title} Poster`}
                     />
                 ) : (
-                    <div className="filler-poster" />
+                    <PlaceHolder />
                 )}
             </MovieImage>
 

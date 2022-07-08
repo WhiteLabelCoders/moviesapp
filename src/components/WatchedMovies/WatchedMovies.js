@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Container } from "../Container/Container";
 import { GlobalContext } from "../../context/GlobalState";
 import MovieElement from '../MovieElement';
+import useDocumentTitle from '../../utils/useDocumentTitle';
 
 const StyledMoviesList = styled.section`
     padding-top: 4rem;
@@ -36,7 +37,11 @@ const MoviesGrid = styled.div`
         grid-template-columns: repeat(4, 1fr);
     }
 `
-function WatchedMovies() {
+
+function WatchedMovies({ title }) {
+    {/* Set page title */ }
+    useDocumentTitle(title);
+    {/* Get current watched movies list from context */ }
     const { watchedmovies } = useContext(GlobalContext);
 
     return (

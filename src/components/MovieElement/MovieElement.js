@@ -14,7 +14,6 @@ const Movie = styled.div`
 function MovieElement({ movie, type }) {
     return (
         <Movie>
-            <div className="movie-overlay"></div>
             <img
                 src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                 alt={`${movie.title} Poster`}
