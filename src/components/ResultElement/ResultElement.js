@@ -7,12 +7,14 @@ import { Button } from '../Button/Button';
 const StyledMovie = styled.div`
     display: flex;
     margin-bottom: 1.5rem;
-    border: 1px solid grey;
+    border: 1px solid var(--gray);
     border-radius: 0.5rem;
     overflow: hidden;
 `
 
 const MovieImage = styled.div`
+    margin-right: 0.5rem;
+
     img {
         width: 105px;
         height: 143px;
@@ -23,7 +25,8 @@ const MovieImage = styled.div`
 const PlaceHolder = styled.div`
     width: 105px;
     height: 143px;
-    background-color: #dbdada;
+    background-color: var(--silver);
+    border-radius: 5px;
 `
 
 const MovieControls = styled.div`
@@ -41,7 +44,7 @@ const MovieControls = styled.div`
 const MovieInfo = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center ;
 `
 
 const MovieTitle = styled.h3`
@@ -57,7 +60,7 @@ const MovieTitle = styled.h3`
 
 
 const MovieDate = styled.h4`
-    margin: 0;
+    margin: 0 0 0.5rem 0;
     font-size: 1.25rem;
     font-weight: 300;
     color: var(--black);

@@ -11,11 +11,19 @@ const StyledMoviesList = styled.section`
 const MoviesHeading = styled.h1`
     font-size: 3rem;
     color: var(--red);
+
+    @media screen and (max-width: 600px) {
+        font-size: 2rem;
+    }
 `
 const NoMovies = styled.h2`
-  font-size: 2.5rem;
-  text-align: center;
-  color: #c4c4c4;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--light-gray);
+
+    @media screen and (max-width: 600px) {
+        font-size: 1.5rem;
+    }
 `
 
 const StyledMoviesListTop = styled.header`
@@ -29,7 +37,7 @@ const MoviesGrid = styled.div`
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 3rem;
 
-     @media (min-width: 600px) {
+    @media (min-width: 600px) {
         grid-template-columns: repeat(2, 1fr);
     }
 

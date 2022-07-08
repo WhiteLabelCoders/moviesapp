@@ -1,7 +1,10 @@
 :root {
     --red: #db002f;
-    --white: #ffffff;
+    --white: #fff;
     --light-white: rgba(255, 255, 255, 0.7);
-    --black: #000000;
+    --black: #000;
     --secondary: #21d07a;
+    --gray: #808080;
+    --light-gray: #c4c4c4;
+    --silver: #dbdada;
 }

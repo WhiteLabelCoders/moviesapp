@@ -4,10 +4,10 @@ import MovieControls from '../MovieControls';
 
 const Movie = styled.div`
     img {
-        border-radius: 0.5rem;
         width:100%;
         object-fit: cover;
         object-position: center;
+        border-radius: 0.5rem;
     }
 `
 

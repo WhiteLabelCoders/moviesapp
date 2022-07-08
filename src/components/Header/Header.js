@@ -33,12 +33,17 @@ const AppNav = styled.ul`
     padding-left:0;
 
     @media screen and (max-width: 992px) {
-        flex-direction: column;
         margin-top: 2rem;
+        flex-direction: column;
     }
 
     li {
         margin: 0 15px;
+
+        @media screen and (max-width: 992px) {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
 
         a {
             color: var(--white);
@@ -50,11 +55,6 @@ const AppNav = styled.ul`
             &:hover {
                 color: var(--black);
             }
-        }
-
-        @media screen and (max-width: 992px) {
-            margin-bottom: 2rem;
-            text-align: center;
         }
     }
 `

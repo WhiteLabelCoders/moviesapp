@@ -15,17 +15,17 @@ const Button = styled.button`
     line-height: 1.1;
     cursor: pointer;
 
-     @media (max-width: 768px) {
-        font-size: 0.6rem;
-    }
-
     &:disabled {
-        background-color: #c4c4c4;
+        background-color: var(--light-gray);
         pointer-events: none;
     }
 
     &:hover {
         opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 0.6rem;
     }
 `
 
